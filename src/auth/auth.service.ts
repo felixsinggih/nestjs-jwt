@@ -12,6 +12,7 @@ export class AuthService {
   ) {}
 
   async validateUser({ email, password }: AuthPayloadDto) {
+    console.log('Inside AuthService');
     const findUser = await this.databaseService.user.findUnique({
       where: {
         email,
